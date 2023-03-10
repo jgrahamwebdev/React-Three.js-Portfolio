@@ -28,9 +28,10 @@ const Hero = () => {
             {/* THREE.JS MODEL */}
             <ComputersCanvas />
 
+            {/* SCROLL ARROW */}
             <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
               <a href='#about'>
-              {/* <div className='w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-center m-auto p-2'>
+              <div className='w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-center p-2 absolute left-[49vw]'>
                 <motion.div
               animate={{
                 y: [0, 22, 0],
@@ -42,8 +43,8 @@ const Hero = () => {
               }}
               className='w-3 h-3 rounded-full bg-white mb-1'
             />
-            </div> */}
-           <motion.div className="text-center text-[3rem]" animate={{
+            </div>
+           {/* <motion.div className="text-center text-[3rem] absolute" animate={{
                 y: [0, 22, 0],
               }}
               transition={{
@@ -51,7 +52,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}>&darr;</motion.div>
-              
+               */}
             </a>
           </div>
 

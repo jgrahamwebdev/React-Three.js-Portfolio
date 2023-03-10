@@ -31,7 +31,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`${styles.paddingX} w-full flex item-center py-5 fixed top-0 z-20 ${top ? 'bg-transparent' : 'bg-primary'} transition duration-300 ease-in-out`}>
+        <nav className={`${styles.paddingX} w-full flex item-center py-5 fixed top-0 z-20 ${top ? 'bg-transparent' : 'bg-smoke'} transition duration-300 ease-in-out`}>
             <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
 
                 {/* LOGO/TITLE */}

@@ -1,12 +1,15 @@
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls, Preload, useGLTF, useAnimations, useFBX } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+import Model from "./RobotPlayground";
+
 const Computers = ({ isMobile }) => {
     const computer = useGLTF("./desktop_pc/scene.gltf");
+    const fbx = useFBX("./desktop_pc/Robot_Holo_5.fbx")
   
     return (
       <mesh>
@@ -22,9 +25,9 @@ const Computers = ({ isMobile }) => {
         <pointLight intensity={1} />
         <primitive
           object={computer.scene}
-          scale={isMobile ? 0.7 : 2.4}
-          position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-          rotation={[0.05, 1.7, -0.1]}
+          scale={isMobile ? 1.7 : 2.4}
+          position={isMobile ? [0, -3.5, -0.1] : [0, -3.25, -1.5]}
+          rotation={isMobile ? [0.05, 1.8, -0.1] : [0.05, 1.7, -0.1]}
         />
       </mesh>
     );
@@ -68,6 +71,10 @@ const Computers = ({ isMobile }) => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />
+          
+          {/* ANIMATED ROBOT */}
+          {/* <Model isMobile={isMobile} /> */}
+
           <Computers isMobile={isMobile} />
         </Suspense>
  
