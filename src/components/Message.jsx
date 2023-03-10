@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
     
       setTimeout(() => {
         setTimeOut(1)
-      }, 5000)
+      }, 4000)
     
       return (
-        timeOut !== 1 && <motion.div className={`alert alert-${variant} h-[5rem] w-[10rem] absolute top-[35%] left-[63%] green-pink-gradient p-[1px] rounded-[20px] shadow-card flex items-center justify-center z-50`} animate={{
+        timeOut !== 1 && <motion.div className={`alert alert-${variant} h-[4rem] w-[8rem] absolute top-[33%] left-[65%] flex items-center justify-center z-50`} animate={{
             y: [0, 20, 0],
           }}
           transition={{
@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
             repeat: Infinity,
             repeatType: "loop",
           }}>
-            <div className="bg-tertiary rounded-[20px] h-[4.9rem] flex justifty-center items-center w-full px-4">
+            <div className="h-[4rem] flex justify-center items-center w-full messageBox">
                 <h3 className='text-white'>Click & Spin! &darr;</h3>
             </div>
         </motion.div>

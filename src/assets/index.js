@@ -21,14 +21,28 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+import django from "./tech/django.png";
+import expressjs from "./tech/expressjs.png";
+import java from "./tech/java.png";
+import python from "./tech/python.png";
+import spring from "./tech/spring.png";
+import nextjs from "./tech/nextjs.png";
+import mysql from "./tech/mysql.png";
+
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
+import dojo from "./company/dojo.png";
+import webdev from "./company/webdev.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import ecommerce from "./ecommerce.png";
+import artblog from "./artblog.png";
+import mellow from "./mellow.png";
+
 
 export {
   logo,
@@ -52,11 +66,23 @@ export {
   tailwind,
   typescript,
   threejs,
+  django,
+  python,
+  java,
+  spring, 
+  expressjs,
+  nextjs,
+  mysql,
   meta,
   shopify,
   starbucks,
+  dojo,
+  webdev,
   tesla,
   carrent,
   jobit,
   tripguide,
+  ecommerce,
+  artblog,
+  mellow
 };

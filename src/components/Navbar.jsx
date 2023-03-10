@@ -7,11 +7,31 @@ import { logo, menu, close } from '../assets';
 
 const Navbar = () => {
     const [active, setActive] = useState('');
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [top, setTop] = useState(true)
+    const handleScroll = () => {
+        const position = window.scrollY;
+        setScrollPosition(position);
+        if (scrollPosition === 0) {
+          setTop(true)
+        } else if (scrollPosition > 10) {
+          setTop(false)
+        } else if (scrollPosition < 10) {
+          setTop(true)
+        }
+      }
+      useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+          window.removeEventListener('scroll', handleScroll)
+        }
+      })
 
 
     return (
-        <nav className={`${styles.paddingX} w-full flex item-center py-5 fixed top-0 z-20 bg-primary`}>
+        <nav className={`${styles.paddingX} w-full flex item-center py-5 fixed top-0 z-20 ${top ? 'bg-transparent' : 'bg-primary'} transition duration-300 ease-in-out`}>
             <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
 
                 {/* LOGO/TITLE */}
